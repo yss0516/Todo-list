@@ -5,14 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do List</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
 </head>
 <body>
     <h1>Todo App</h1>
 
-    <input type="text" id="new-task" placeholder="New task">
-    <button id="add-btn">Add task</button>
-    
-    <ul id="list"></ul>
+    <div class="container">
+        <div class="section1">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="section2">
+            <h2>Add New Task</h2>
+            <form id="form">
+                <label for="task-title">Title :</label>
+                <input type="text" id="task-title" class="input" placeholder="Title of task">
+                <label for="task-des">Description :</label>
+                <textarea id="task-des" placeholder="Description of task" rows="5" class="input"></textarea>
+                <input type="hidden" id="task-id"> <!-- store the data id -->
+                <button id="add-btn">Add task</button>
+                <div class="edit-btn-container">
+                    <button class="delete-btn">Delete</button>
+                    <button class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="section3">
+            <div class="sec3-header">
+                <h2>Task List</h2>
+                <button class="new-btn">NEW TASK</button>
+            </div>
+            <ul id="list"></ul>
+        </div>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="app.js"></script>

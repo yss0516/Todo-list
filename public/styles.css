@@ -1,5 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 body {
   font-family: Arial, sans-serif;
-  max-width: 500px;
-  margin: 50px auto;
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.container > * {
+  padding: 20px;
+}
+
+.section1 {
+  background-color: #D9CFC7;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.section3 {
+  background-color: #EFE9E3;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+form * {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.input {
+  background-color: #F9F8F6;
+  padding: 10px;
+}
+
+#list li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;          
+  justify-content: space-between;
+  background-color: #F9F8F6;
+  margin-bottom: 10px;
+  padding: 5px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 18px;
+}
+
+#list input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  accent-color: #5a4633;
+  margin: 0;              
+}
+
+#list li .icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;         /* 텍스트 길어져도 아이콘 위치 고정 */
+  border-radius: 6px;
+}
+
+#list li .left {
+  display: flex;
+  align-items: center;    
+  gap: 10px;             
+}
+
+#list li .material-symbols-outlined {
+  font-size: 22px;        
+  line-height: 1;         
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.sec3-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.new-btn {
+  background-color: #B6CEB4;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+.edit-btn-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.edit-btn-container * {
+  width: 50%;
+}
+
+.hidden {
+  display: none;
 }
