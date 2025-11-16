@@ -71,6 +71,18 @@ function deleteInput(id) {
     });
 }
 
+function goToNew() {
+    const $title = $("#task-title");
+    const $description = $("#task-des");
+
+    $(".section2 h2").text("Add New Task");
+    $("#add-btn").show();
+    $(".edit-btn-container").hide();
+    $title.val("");
+    $description.val("");
+    $("#task-id").val("");
+}
+
 $(document).ready(function() {
     const $title = $("#task-title");
     const $description = $("#task-des");
@@ -98,12 +110,7 @@ $(document).ready(function() {
     })
 
     $(".new-btn").click(function() {
-        $title.val(``);
-        $description.val(``);
-        $(".section2 h2").text("Add New Task");
-        $("#add-btn").show();
-        $(".edit-btn-container").hide();
-        $("#task-id").val("");
+        goToNew();
     })
 
     $(".save-btn").click(function(e) {
@@ -111,6 +118,7 @@ $(document).ready(function() {
         const id = $("#task-id").val();
 
         editInput(id, $title, $description);
+        goToNew();
     })
 
 
@@ -122,14 +130,8 @@ $(document).ready(function() {
             return alert("There is no task to delete.");
         } else {
             deleteInput(id);
-            $(".section2 h2").text("Add New Task");
-            $("#add-btn").show();
-            $(".edit-btn-container").hide();
-            $title.val("");
-            $description.val("");
-            $("#task-id").val("");
+            goToNew();
         }
     })
 
 })
-
